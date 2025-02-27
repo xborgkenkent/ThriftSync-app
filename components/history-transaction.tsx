@@ -21,7 +21,7 @@ export default function HistoryTransaction({ transactions }: HistoryTransactionP
         }).format(amount);
 
   return (
-    <div className="fixed right-1 top-0 h-full w-96 bg-background shadow-lg border-l overflow-y-auto p-4">
+    <div className="fixed right-1 top-0 h-full bg-background shadow-lg border-l overflow-y-auto p-4">
       <Card>
         <CardHeader>
           <CardTitle>Transaction History</CardTitle>
