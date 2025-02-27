@@ -1,6 +1,8 @@
 import FinanceSummary from "@/components/finance-summary";
 import HistoryTransaction from "@/components/history-transaction";
-
+import RecentGoal from "@/components/recent-goal";
+import TopFive from "@/components/top-five";
+import EarningSpendingChart from "@/components/earning-spending-chart";
 export default function Dashboard() {
   const transactions: Transaction[] = [
     { id: 1, type: "Income", amount: 2500, description: "Salary", date: "Feb 1, 2025" },
@@ -25,6 +27,26 @@ export default function Dashboard() {
     { id: 20, type: "Income", amount: 800, description: "Affiliate Marketing", date: "Feb 20, 2025" },
   ];
   
+  const goals: Goal[] = [
+    {
+      id: 2,
+      title: "New Laptop",
+      goalAmount: 1500,
+      currentAmount: 600,
+    },
+    {
+      id: 3,
+      title: "Vacation Trip",
+      goalAmount: 3000,
+      currentAmount: 750,
+    },
+    {
+      id: 4,
+      title: "Home Renovation",
+      goalAmount: 10000,
+      currentAmount: 2500,
+    }
+  ]
 
   return (
     <div className="p-6 flex">
@@ -33,8 +55,14 @@ export default function Dashboard() {
         <div className="flex justify-center">
           <FinanceSummary income={5000} expenses={2000} savings={1000} balance={2000} />
         </div>
+        <div className="flex">
+          <TopFive/>
+          <RecentGoal goals={goals}/>
+        </div>
+        <EarningSpendingChart/>
       </div>
-      <HistoryTransaction transactions={transactions} />
+      <HistoryTransaction transactions={transactions} />  
     </div>
+        
   );
 }
