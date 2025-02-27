@@ -27,9 +27,9 @@ export default function FinanceSummary({
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+    <div className="flex gap-2 justify-evenly ">
       {stats.map((stat, index) => (
-        <Card key={index} className={`pl-2 pr-24 border-l-4 ${stat.color} border-t-gray-200 border-r-gray-200 border-b-gray-200`}>
+        <Card key={index} className={`pl-2 pr-16 border-l-4 ${stat.color} border-t-gray-200 border-r-gray-200 border-b-gray-200`}>
           <CardHeader>
             <CardTitle className="font-thin">{stat.title}</CardTitle>
           </CardHeader>
