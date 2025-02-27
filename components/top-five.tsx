@@ -65,7 +65,7 @@ export default function TopFive() {
         >
           <PieChart>
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <Pie data={chartData} dataKey="visitors" label nameKey="browser" />
+            <Pie data={chartData} dataKey="visitors"  nameKey="browser" />
           </PieChart>
         </ChartContainer>
       </CardContent>
